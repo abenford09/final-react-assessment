@@ -1,7 +1,17 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {v4 as uuidv4} from 'uuid';
 
-function App() {
+
+class App extends React.Component {
+
+  state = {
+    messages: [],
+    singleMessage: null,
+    Loading: false
+  }
+  
   return (
     <div className="App">
       <h1>My messaging system.</h1>
