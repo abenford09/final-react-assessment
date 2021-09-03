@@ -8,6 +8,7 @@ class MessageItem extends React.Component {
         const handleDelete = (e) => {
             deleteMessage(e.target.id)
         }
+        
         return (
             <div className="listItem">
                 <h1 className="hover" onClick= {() => selectSingleMessage(message)} >{message.messageBody}</h1>

@@ -21,9 +21,9 @@ class App extends React.Component {
     const {messages, loading, singleMessage}= this.state
 
     const addMessage = (obj) => {
+      console.log(obj)
       const id = uuidv4()
       obj.id =id
-      obj.userName = ""
       this.setState({messages: [...messages, obj ]})
     }
 
@@ -80,17 +80,6 @@ class App extends React.Component {
 }
 }
   
-  // return (
-  //   <div className="container">
-  //     <h1>My messaging system.</h1>
-  //     <MessageInput addMessage={addMessage}/>
-  //     <Messages
-  //     messages={messages}
-  //     deleteMessage={deleteMessage}
-  //     selectSingleMessage={selectSingleMessage}
-  //     />
-  //   </div>
-  //   )
 
 export default App;
 

@@ -24,8 +24,9 @@ class SingleMessage extends React.Component {
                 <h1>Single Message</h1>
                 <h1>{singleMessage.messageBody}</h1>
                 <p>{singleMessage.id}</p>
-                <button className='btn' onCLick={handleClear}>Back</button>
-                <button className='btn' onCLick={handleEdit}>Edit</button>
+                <p>{singleMessage.userName}</p>
+                <button className='btn' onClick={handleClear}>Back</button>
+                <button className='btn' onClick={handleEdit}>Edit</button>
                 {edit && <EditMessage singleMessage={singleMessage} editMessage={editMessage} />}
                 
             </Fragment>

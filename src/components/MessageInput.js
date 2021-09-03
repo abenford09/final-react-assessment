@@ -1,10 +1,9 @@
 import React from 'react'
-import UserName from './UserName'
 
 class MessageInput extends React.Component {
     state = {
         bodyTxt: '',
-        userNametxt: ''
+        userNameTxt: ''
 
     }
 
@@ -22,27 +21,25 @@ class MessageInput extends React.Component {
         const handleSubmit = (e) => {
             e.preventDefault()
             addMessage({messageBody: bodyTxt, userName: userNameTxt})
-            this.setState({bodyTxt: '', userNameTxt: ""})
+            this.setState({bodyTxt: '', userNameTxt: ''})
         }
 
         return (
             <form onSubmit={handleSubmit}>
             
-                <p>Name</p>
+                {/* <p>Name</p> */}
                 <input type='text'
                 className="PopText"
                 placeholder='Username'
-                name='text'
                 value={userNameTxt}
                 onChange={handleChgName}
                 />
             
 
-                <p>Text</p>
+                {/* <p>Text</p> */}
                 <input type='text'
                 className="PopText"
                 placeholder="Message Post"
-                name='text'
                 value={bodyTxt}
                 onChange={handleChgBody}
                 />

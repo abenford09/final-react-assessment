@@ -4,7 +4,7 @@ import MessageItem from './MessageItem'
 class Messages extends React.Component {
     render() {
 
-        const {messages, userName, deleteMessage, selectSingleMessage} = this.props
+        const {messages, deleteMessage, selectSingleMessage} = this.props
 
         return (
             <div className='container'>
@@ -12,7 +12,6 @@ class Messages extends React.Component {
                     <MessageItem 
                     message={message}
                     key={message.id}
-                    userName={userName}
                     deleteMessage={deleteMessage}
                     selectSingleMessage={selectSingleMessage}
                     />

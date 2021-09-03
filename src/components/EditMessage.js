@@ -7,7 +7,7 @@ class EditMessage extends React.Component {
 
     render() {
         const{bodyTxt} = this.state
-        const{singleMesage, editMessage} = this.props
+        const{singleMessage, editMessage} = this.props
 
         const handleChg = (e) => {
             this.setState({bodyTxt: e.target.value})
@@ -25,7 +25,7 @@ class EditMessage extends React.Component {
         return (
             <Fragment>
                 <h1>Edit Message</h1>
-                <form onSubmit={handleSubmit} id={singleMesage.id}>
+                <form onSubmit={handleSubmit} id={singleMessage.id}>
                     <input className='' type="text" value={bodyTxt} onChange={handleChg}/>
                     <input type="submit" className="btn hover"/>
                 </form>
