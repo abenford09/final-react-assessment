@@ -10,7 +10,7 @@ class EditMessage extends React.Component {
         const{singleMesage, editMessage} = this.props
 
         const handleChg = (e) => {
-            this.setState({text: e.target.value})
+            this.setState({bodyTxt: e.target.value})
         }
 
         const handleSubmit = (e) => {
